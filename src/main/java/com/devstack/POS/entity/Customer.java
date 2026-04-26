@@ -19,7 +19,7 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(nullable = false,length = 100)
     private String name;
 
     private String address;
