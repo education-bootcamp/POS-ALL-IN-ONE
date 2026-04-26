@@ -1905,3 +1905,8 @@ java.lang.IllegalArgumentException: Could not resolve domain type of interface c
 2026-04-26T21:33:47.703+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
 2026-04-26T21:33:47.708+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 0.859 seconds (process running for 2597.049)
 2026-04-26T21:33:47.711+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-26T21:37:22.852+05:30  INFO 11205 --- [POS] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26T21:37:22.857+05:30  INFO 11205 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-26T21:37:22.868+05:30  INFO 11205 --- [POS] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:37:22.870+05:30  INFO 11205 --- [POS] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-04-26T21:37:22.880+05:30  INFO 11205 --- [POS] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
