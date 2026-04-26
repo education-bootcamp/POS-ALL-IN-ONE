@@ -1710,3 +1710,198 @@ java.lang.IllegalArgumentException: Could not resolve domain type of interface c
 2026-04-26T21:20:03.512+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
 2026-04-26T21:20:03.517+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 3.111 seconds (process running for 1772.858)
 2026-04-26T21:20:03.521+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-26T21:28:38.526+05:30  INFO 11205 --- [POS] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 14 class path changes (0 additions, 10 deletions, 4 modifications)
+2026-04-26T21:28:38.528+05:30  INFO 11205 --- [POS] [Thread-24] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26T21:28:38.529+05:30  INFO 11205 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-26T21:28:38.531+05:30  INFO 11205 --- [POS] [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:28:38.532+05:30  INFO 11205 --- [POS] [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-04-26T21:28:38.535+05:30  INFO 11205 --- [POS] [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-04-26T21:28:38.620+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 11205 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-04-26T21:28:38.621+05:30 DEBUG 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-26T21:28:38.621+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-04-26T21:28:38.777+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26T21:28:38.779+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-04-26T21:28:38.901+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-26T21:28:38.902+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-26T21:28:38.902+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-26T21:28:38.910+05:30  INFO 11205 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 287 ms
+2026-04-26T21:28:38.960+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26T21:28:38.991+05:30  INFO 11205 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26T21:28:38.992+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-04-26T21:28:39.012+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19d58e04
+2026-04-26T21:28:39.012+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-04-26T21:28:39.014+05:30  WARN 11205 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26T21:28:39.015+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26T21:28:39.031+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26T21:28:39.032+05:30  INFO 11205 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:28:39.063+05:30  WARN 11205 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26T21:28:39.247+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
+2026-04-26T21:28:39.251+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 0.657 seconds (process running for 2288.592)
+2026-04-26T21:28:39.253+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-26T21:28:40.620+05:30  INFO 11205 --- [POS] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 10 class path changes (10 additions, 0 deletions, 0 modifications)
+2026-04-26T21:28:40.622+05:30  INFO 11205 --- [POS] [Thread-28] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26T21:28:40.627+05:30  INFO 11205 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-26T21:28:40.640+05:30  INFO 11205 --- [POS] [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:28:40.646+05:30  INFO 11205 --- [POS] [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-04-26T21:28:40.664+05:30  INFO 11205 --- [POS] [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-04-26T21:28:40.802+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 11205 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-04-26T21:28:40.803+05:30 DEBUG 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-26T21:28:40.803+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-04-26T21:28:41.013+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26T21:28:41.030+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2026-04-26T21:28:41.115+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-26T21:28:41.116+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-26T21:28:41.116+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-26T21:28:41.124+05:30  INFO 11205 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 317 ms
+2026-04-26T21:28:41.182+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26T21:28:41.209+05:30  INFO 11205 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26T21:28:41.210+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-04-26T21:28:41.227+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57101b25
+2026-04-26T21:28:41.228+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-04-26T21:28:41.229+05:30  WARN 11205 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26T21:28:41.230+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26T21:28:41.337+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26T21:28:41.602+05:30  INFO 11205 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:28:41.656+05:30  WARN 11205 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26T21:28:41.882+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
+2026-04-26T21:28:41.886+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 1.125 seconds (process running for 2291.227)
+2026-04-26T21:28:41.887+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-26T21:32:59.603+05:30  INFO 11205 --- [POS] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-04-26T21:32:59.605+05:30  INFO 11205 --- [POS] [Thread-32] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26T21:32:59.606+05:30  INFO 11205 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-26T21:32:59.608+05:30  INFO 11205 --- [POS] [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:32:59.609+05:30  INFO 11205 --- [POS] [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-04-26T21:32:59.612+05:30  INFO 11205 --- [POS] [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-04-26T21:32:59.699+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 11205 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-04-26T21:32:59.699+05:30 DEBUG 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-26T21:32:59.699+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-04-26T21:32:59.853+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26T21:32:59.897+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 4 JPA repository interfaces.
+2026-04-26T21:33:00.019+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-26T21:33:00.020+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-26T21:33:00.020+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-26T21:33:00.029+05:30  INFO 11205 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 327 ms
+2026-04-26T21:33:00.079+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26T21:33:00.108+05:30  INFO 11205 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26T21:33:00.109+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-04-26T21:33:00.123+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@336d9287
+2026-04-26T21:33:00.124+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-04-26T21:33:00.125+05:30  WARN 11205 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26T21:33:00.126+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26T21:33:00.214+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26T21:33:00.259+05:30  INFO 11205 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:33:00.295+05:30  WARN 11205 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26T21:33:00.734+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
+2026-04-26T21:33:00.757+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 1.081 seconds (process running for 2550.098)
+2026-04-26T21:33:00.772+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-26T21:33:44.161+05:30  INFO 11205 --- [POS] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-04-26T21:33:44.162+05:30  INFO 11205 --- [POS] [Thread-36] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26T21:33:44.163+05:30  INFO 11205 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-26T21:33:44.165+05:30  INFO 11205 --- [POS] [Thread-36] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:33:44.165+05:30  INFO 11205 --- [POS] [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-04-26T21:33:44.169+05:30  INFO 11205 --- [POS] [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2026-04-26T21:33:44.283+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 11205 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-04-26T21:33:44.284+05:30 DEBUG 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-26T21:33:44.284+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-04-26T21:33:44.531+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26T21:33:44.565+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2026-04-26T21:33:44.752+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-26T21:33:44.753+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-26T21:33:44.754+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-26T21:33:44.769+05:30  INFO 11205 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 483 ms
+2026-04-26T21:33:44.837+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26T21:33:44.871+05:30  INFO 11205 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26T21:33:44.873+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-04-26T21:33:44.902+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@547e98d3
+2026-04-26T21:33:44.902+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-04-26T21:33:44.905+05:30  WARN 11205 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26T21:33:44.908+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26T21:33:45.028+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26T21:33:45.062+05:30  INFO 11205 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:33:45.100+05:30  WARN 11205 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26T21:33:45.395+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
+2026-04-26T21:33:45.398+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 1.145 seconds (process running for 2594.739)
+2026-04-26T21:33:45.399+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-26T21:33:46.777+05:30  INFO 11205 --- [POS] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-04-26T21:33:46.779+05:30  INFO 11205 --- [POS] [Thread-40] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26T21:33:46.781+05:30  INFO 11205 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-26T21:33:46.784+05:30  INFO 11205 --- [POS] [Thread-40] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:33:46.785+05:30  INFO 11205 --- [POS] [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-04-26T21:33:46.788+05:30  INFO 11205 --- [POS] [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2026-04-26T21:33:46.897+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 11205 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-04-26T21:33:46.898+05:30 DEBUG 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-26T21:33:46.898+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-04-26T21:33:47.059+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26T21:33:47.073+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2026-04-26T21:33:47.163+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-26T21:33:47.163+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-26T21:33:47.163+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-26T21:33:47.174+05:30  INFO 11205 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 273 ms
+2026-04-26T21:33:47.230+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26T21:33:47.259+05:30  INFO 11205 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26T21:33:47.259+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-04-26T21:33:47.284+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1669a447
+2026-04-26T21:33:47.284+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-04-26T21:33:47.288+05:30  WARN 11205 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26T21:33:47.290+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26T21:33:47.378+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26T21:33:47.414+05:30  INFO 11205 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:33:47.443+05:30  WARN 11205 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26T21:33:47.703+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
+2026-04-26T21:33:47.708+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 0.859 seconds (process running for 2597.049)
+2026-04-26T21:33:47.711+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
