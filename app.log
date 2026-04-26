@@ -1514,3 +1514,121 @@ Caused by: java.sql.SQLSyntaxErrorException: Can't DROP 'FKf9abd30bhiqvugayxlpq8
 2026-04-26T20:50:58.040+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
 2026-04-26T20:50:58.048+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 2.165 seconds (process running for 27.389)
 2026-04-26T20:50:58.052+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-26T21:01:09.276+05:30  INFO 11205 --- [POS] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-04-26T21:01:09.356+05:30  INFO 11205 --- [POS] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26T21:01:09.371+05:30  INFO 11205 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-26T21:01:09.389+05:30  INFO 11205 --- [POS] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:01:09.407+05:30  INFO 11205 --- [POS] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-04-26T21:01:09.432+05:30  INFO 11205 --- [POS] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-04-26T21:01:10.202+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 11205 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-04-26T21:01:10.203+05:30 DEBUG 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-26T21:01:10.203+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-04-26T21:01:10.452+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26T21:01:10.471+05:30  WARN 11205 --- [POS] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Could not resolve domain type of interface com.devstack.POS.repo.CustomerRepo
+2026-04-26T21:01:10.477+05:30  INFO 11205 --- [POS] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-26T21:01:10.521+05:30 ERROR 11205 --- [POS] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Could not resolve domain type of interface com.devstack.POS.repo.CustomerRepo
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.resolveTypeParameter(DefaultRepositoryMetadata.java:79) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:58) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:79) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:93) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:170) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:67) ~[spring-boot-autoconfigure-4.0.6.jar:4.0.6]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromImportBeanDefinitionRegistrars$0(ConfigurationClassBeanDefinitionReader.java:422) ~[spring-context-7.0.7.jar:7.0.7]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportBeanDefinitionRegistrars(ConfigurationClassBeanDefinitionReader.java:421) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:152) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:124) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:464) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:316) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:795) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:603) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.devstack.POS.PosApplication.main(PosApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+
+2026-04-26T21:02:05.139+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 11205 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-04-26T21:02:05.140+05:30 DEBUG 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-26T21:02:05.140+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-04-26T21:02:05.473+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26T21:02:05.479+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-04-26T21:02:05.806+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-26T21:02:05.810+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-26T21:02:05.811+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-26T21:02:05.827+05:30  INFO 11205 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 680 ms
+2026-04-26T21:02:06.005+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26T21:02:06.071+05:30  INFO 11205 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26T21:02:06.074+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-04-26T21:02:06.150+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@417c8771
+2026-04-26T21:02:06.153+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-04-26T21:02:06.164+05:30  WARN 11205 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26T21:02:06.170+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26T21:02:06.514+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26T21:02:06.582+05:30  INFO 11205 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:02:06.657+05:30  WARN 11205 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26T21:02:06.934+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
+2026-04-26T21:02:06.940+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 1.867 seconds (process running for 696.281)
+2026-04-26T21:02:06.942+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-04-26T21:07:48.686+05:30  INFO 11205 --- [POS] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2026-04-26T21:07:48.688+05:30  INFO 11205 --- [POS] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-26T21:07:48.690+05:30  INFO 11205 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-26T21:07:48.692+05:30  INFO 11205 --- [POS] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:07:48.694+05:30  INFO 11205 --- [POS] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-04-26T21:07:48.697+05:30  INFO 11205 --- [POS] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-04-26T21:07:48.807+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 11205 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-04-26T21:07:48.808+05:30 DEBUG 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-04-26T21:07:48.808+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-04-26T21:07:49.070+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-26T21:07:49.125+05:30  INFO 11205 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2026-04-26T21:07:49.358+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-26T21:07:49.359+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-26T21:07:49.360+05:30  INFO 11205 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-04-26T21:07:49.373+05:30  INFO 11205 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 562 ms
+2026-04-26T21:07:49.431+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-26T21:07:49.472+05:30  INFO 11205 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-26T21:07:49.473+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-04-26T21:07:49.508+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61c5a5c1
+2026-04-26T21:07:49.509+05:30  INFO 11205 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-04-26T21:07:49.510+05:30  WARN 11205 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-26T21:07:49.511+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-26T21:07:49.682+05:30  INFO 11205 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-26T21:07:49.733+05:30  INFO 11205 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-26T21:07:49.768+05:30  WARN 11205 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-26T21:07:50.018+05:30  INFO 11205 --- [POS] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-26T21:07:50.272+05:30  INFO 11205 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
+2026-04-26T21:07:50.276+05:30  INFO 11205 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 1.507 seconds (process running for 1039.617)
+2026-04-26T21:07:50.278+05:30  INFO 11205 --- [POS] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
