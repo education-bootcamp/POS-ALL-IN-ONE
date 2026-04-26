@@ -12,7 +12,7 @@ import java.util.UUID;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="customer")
+@Table(name="product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -27,7 +27,7 @@ public class Product {
     @Column(name="qty_on_hand")
     private Integer qtyOnHand;
 
-    @OneToMany(mappedBy = "customerOrder", cascade = CascadeType.ALL, fetch=FetchType.LAZY)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch=FetchType.LAZY)
     private List<OrderDetails> detailsList;
 
 }
