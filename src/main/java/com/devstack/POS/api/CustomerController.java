@@ -84,7 +84,7 @@ public class CustomerController {
                         .build());
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<StandardResponseDTO> searchCustomers() {
         List<CustomerResponseDTO> result = customerService.findAll();
         return ResponseEntity
