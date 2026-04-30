@@ -544,3 +544,8 @@ com.devstack.POS.api.CustomerController#searchCustomers(String, int, int) mapped
 2026-04-27T18:06:46.417+05:30  INFO 19289 --- [POS] [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-04-27T18:06:46.418+05:30  INFO 19289 --- [POS] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-04-27T18:06:46.423+05:30  INFO 19289 --- [POS] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-04-27T18:08:00.369+05:30  INFO 19289 --- [POS] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-27T18:08:00.371+05:30  INFO 19289 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-27T18:08:00.377+05:30  INFO 19289 --- [POS] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-27T18:08:00.381+05:30  INFO 19289 --- [POS] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-27T18:08:00.389+05:30  INFO 19289 --- [POS] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
