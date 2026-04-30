@@ -11,6 +11,7 @@ import java.util.UUID;
 @Setter
 @ToString
 @Entity
+@Builder
 @Table(name = "order_details")
 public class OrderDetails {
     @Id

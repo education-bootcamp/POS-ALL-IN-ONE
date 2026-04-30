@@ -13,6 +13,7 @@ import java.util.UUID;
 @Setter
 @ToString
 @Entity
+@Builder
 @Table(name = "customer_order")
 public class CustomerOrder {
     @Id
