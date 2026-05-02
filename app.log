@@ -345,3 +345,174 @@ Action:
 
 Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
 
+2026-05-02T21:47:18.861+05:30  INFO 39396 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 39396 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-05-02T21:47:18.871+05:30 DEBUG 39396 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02T21:47:18.875+05:30  INFO 39396 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-05-02T21:47:19.079+05:30  INFO 39396 --- [POS] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T21:47:19.079+05:30  INFO 39396 --- [POS] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T21:47:21.392+05:30  INFO 39396 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T21:47:21.511+05:30  INFO 39396 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 5 JPA repository interfaces.
+2026-05-02T21:47:22.504+05:30  INFO 39396 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-02T21:47:22.520+05:30  INFO 39396 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T21:47:22.521+05:30  INFO 39396 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02T21:47:22.561+05:30  INFO 39396 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3481 ms
+2026-05-02T21:47:22.889+05:30  INFO 39396 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02T21:47:22.992+05:30  INFO 39396 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02T21:47:24.360+05:30  INFO 39396 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T21:47:24.493+05:30  INFO 39396 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T21:47:25.772+05:30  INFO 39396 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73fd570e
+2026-05-02T21:47:25.776+05:30  INFO 39396 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T21:47:26.029+05:30  WARN 39396 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T21:47:26.123+05:30  INFO 39396 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T21:47:28.557+05:30  INFO 39396 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T21:47:28.753+05:30  INFO 39396 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T21:47:28.942+05:30  INFO 39396 --- [POS] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02T21:47:29.348+05:30  WARN 39396 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T21:47:29.428+05:30  WARN 39396 --- [POS] [restartedMain] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 025c187e-ad60-4be2-8999-e702ab260ed8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-02T21:47:29.437+05:30  INFO 39396 --- [POS] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-02T21:47:29.560+05:30  WARN 39396 --- [POS] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/auth/**, , ] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2026-05-02T21:47:29.569+05:30  WARN 39396 --- [POS] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'securityFilterChain' defined in class path resource [com/devstack/POS/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: pattern must start with a /
+2026-05-02T21:47:29.571+05:30  INFO 39396 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T21:47:29.577+05:30  INFO 39396 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-02T21:47:29.587+05:30  INFO 39396 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-02T21:47:29.591+05:30  INFO 39396 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-02T21:47:29.615+05:30  INFO 39396 --- [POS] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-02T21:47:29.670+05:30 ERROR 39396 --- [POS] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'securityFilterChain' defined in class path resource [com/devstack/POS/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: pattern must start with a /
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:872) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:827) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.devstack.POS.PosApplication.main(PosApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/devstack/POS/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: pattern must start with a /
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:2008) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1971) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeanCollection(DefaultListableBeanFactory.java:1863) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1833) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:864) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: pattern must start with a /
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 42 common frames omitted
+Caused by: java.lang.IllegalArgumentException: pattern must start with a /
+	at org.springframework.util.Assert.isTrue(Assert.java:117) ~[spring-core-7.0.7.jar:7.0.7]
+	at org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher$Builder.matcher(PathPatternRequestMatcher.java:320) ~[spring-security-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:150) ~[spring-security-config-7.0.5.jar:7.0.5]
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:195) ~[spring-security-config-7.0.5.jar:7.0.5]
+	at com.devstack.POS.config.SecurityConfig.lambda$securityFilterChain$2(SecurityConfig.java:40) ~[classes/:na]
+	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeHttpRequests(HttpSecurity.java:715) ~[spring-security-config-7.0.5.jar:7.0.5]
+	at com.devstack.POS.config.SecurityConfig.securityFilterChain(SecurityConfig.java:38) ~[classes/:na]
+	at com.devstack.POS.config.SecurityConfig$$SpringCGLIB$$0.CGLIB$securityFilterChain$0(<generated>) ~[classes/:na]
+	at com.devstack.POS.config.SecurityConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-7.0.7.jar:7.0.7]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:398) ~[spring-context-7.0.7.jar:7.0.7]
+	at com.devstack.POS.config.SecurityConfig$$SpringCGLIB$$0.securityFilterChain(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 45 common frames omitted
+
+2026-05-02T21:48:11.144+05:30  INFO 39653 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Starting PosApplication using Java 21.0.10 with PID 39653 (/home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS/target/classes started by hasika in /home/hasika/Desktop/ALL-DEV-(SPRING-BOOT)/POS)
+2026-05-02T21:48:11.150+05:30 DEBUG 39653 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-02T21:48:11.152+05:30  INFO 39653 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : The following 1 profile is active: "dev"
+2026-05-02T21:48:11.245+05:30  INFO 39653 --- [POS] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-02T21:48:11.246+05:30  INFO 39653 --- [POS] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-02T21:48:13.072+05:30  INFO 39653 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-02T21:48:13.152+05:30  INFO 39653 --- [POS] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2026-05-02T21:48:13.785+05:30  INFO 39653 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-02T21:48:13.798+05:30  INFO 39653 --- [POS] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-02T21:48:13.799+05:30  INFO 39653 --- [POS] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-02T21:48:13.833+05:30  INFO 39653 --- [POS] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2582 ms
+2026-05-02T21:48:14.074+05:30  INFO 39653 --- [POS] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-02T21:48:14.169+05:30  INFO 39653 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-02T21:48:14.702+05:30  INFO 39653 --- [POS] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-02T21:48:14.735+05:30  INFO 39653 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-02T21:48:15.165+05:30  INFO 39653 --- [POS] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34bb8071
+2026-05-02T21:48:15.168+05:30  INFO 39653 --- [POS] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-02T21:48:15.225+05:30  WARN 39653 --- [POS] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-02T21:48:15.246+05:30  INFO 39653 --- [POS] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test_pos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: test_pos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-02T21:48:16.631+05:30  INFO 39653 --- [POS] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-02T21:48:16.717+05:30  INFO 39653 --- [POS] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T21:48:16.805+05:30  INFO 39653 --- [POS] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-02T21:48:17.186+05:30  WARN 39653 --- [POS] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-02T21:48:17.263+05:30  WARN 39653 --- [POS] [restartedMain] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 26e23c0f-3425-423c-ad6a-f662bed93827
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-02T21:48:17.272+05:30  INFO 39653 --- [POS] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-02T21:48:17.925+05:30  INFO 39653 --- [POS] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api/v1'
+2026-05-02T21:48:17.932+05:30  INFO 39653 --- [POS] [restartedMain] com.devstack.POS.PosApplication          : Started PosApplication in 7.763 seconds (process running for 9.566)
+2026-05-02T21:48:18.345+05:30  INFO 39653 --- [POS] [restartedMain] c.d.POS.helper.CustomerDataInitializer   : Customers already exist, skipping initialization.
+2026-05-02T21:48:36.971+05:30  INFO 39653 --- [POS] [http-nio-8081-exec-2] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02T21:48:36.973+05:30  INFO 39653 --- [POS] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-02T21:48:36.981+05:30  INFO 39653 --- [POS] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-05-02T21:49:07.508+05:30  WARN 39653 --- [POS] [http-nio-8081-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.devstack.POS.util.StandardResponseDTO> com.devstack.POS.api.AuthController.register(com.devstack.POS.dto.request.RegisterRequestDTO) with 2 errors: [Field error in object 'registerRequestDTO' on field 'password': rejected value [1234]; codes [Size.registerRequestDTO.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequestDTO.password,password]; arguments []; default message [password],128,8]; default message [Password must be between 8 and 128 characters]] [Field error in object 'registerRequestDTO' on field 'password': rejected value [1234]; codes [Pattern.registerRequestDTO.password,Pattern.password,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequestDTO.password,password]; arguments []; default message [password],[Ljakarta.validation.constraints.Pattern$Flag;@18893852,^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$]; default message [Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@$!%*?&)]] ]

@@ -26,19 +26,22 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
+    private static final String[] paths={"/auth/**"};
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http){
         http
+                .cors(cors->cors.configurationSource(corsConfigurationSource()))
                 .csrf(AbstractHttpConfigurer:: disable)
-                .authorizeHttpRequests(
-                        auth -> auth
-                                .requestMatchers("/auth/**").permitAll()
-                                .anyRequest().authenticated()
-                )
                 .sessionManagement(session->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authenticationProvider(authenticationProvider())
-                .addFilterBefore(...)
+                .authorizeHttpRequests(
+                        auth -> auth
+                                .requestMatchers(paths).permitAll()
+                                .anyRequest().authenticated()
+                );
+
+        return http.build();
     }
 
     @Bean
