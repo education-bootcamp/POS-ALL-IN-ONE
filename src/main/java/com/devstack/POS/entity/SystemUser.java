@@ -11,7 +11,7 @@ import java.util.UUID;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "product")
+@Table(name = "system_user")
 @Builder
 public class SystemUser {
     @Id
