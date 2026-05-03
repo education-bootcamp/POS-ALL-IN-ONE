@@ -8,6 +8,7 @@ import com.devstack.POS.util.StandardResponseDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class CustomerController {
     private final CustomerService customerService;
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseEntity<StandardResponseDTO> createCustomer(@RequestBody CustomerRequestDTO dto) {
         customerService.createCustomer(dto);
         return ResponseEntity
@@ -32,6 +34,7 @@ public class CustomerController {
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN','MANAGER')")
     public ResponseEntity<StandardResponseDTO> updateCustomer(
             @RequestBody CustomerRequestDTO dto,
             @PathVariable UUID id) {
@@ -46,6 +49,7 @@ public class CustomerController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<StandardResponseDTO> deleteCustomer(@PathVariable UUID id) {
         customerService.deleteCustomer(id);
         return ResponseEntity
@@ -58,6 +62,7 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN','MANAGER')")
     public ResponseEntity<StandardResponseDTO> findCustomerById(@PathVariable UUID id) {
         CustomerResponseDTO customer = customerService.findCustomerById(id);
         return ResponseEntity
@@ -70,6 +75,7 @@ public class CustomerController {
     }
 
     @GetMapping
+    @PreAuthorize("hasAnyRole('ADMIN','MANAGER')")
     public ResponseEntity<StandardResponseDTO> searchCustomers(
             @RequestParam(defaultValue = "") String searchText,
             @RequestParam(defaultValue = "0") int page,
@@ -85,6 +91,7 @@ public class CustomerController {
     }
 
     @GetMapping("/list")
+    @PreAuthorize("hasAnyRole('ADMIN','MANAGER')")
     public ResponseEntity<StandardResponseDTO> searchCustomers() {
         List<CustomerResponseDTO> result = customerService.findAll();
         return ResponseEntity

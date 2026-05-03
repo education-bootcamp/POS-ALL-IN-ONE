@@ -1073,3 +1073,8 @@ This generated password is for development use only. Your security configuration
 2026-05-02T22:09:36.416+05:30  INFO 44010 --- [POS] [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-05-02T22:09:36.417+05:30  INFO 44010 --- [POS] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-05-02T22:09:36.425+05:30  INFO 44010 --- [POS] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2026-05-02T23:27:14.231+05:30  INFO 44010 --- [POS] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-02T23:27:14.236+05:30  INFO 44010 --- [POS] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-02T23:27:14.247+05:30  INFO 44010 --- [POS] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-02T23:27:14.254+05:30  INFO 44010 --- [POS] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-02T23:27:14.258+05:30  INFO 44010 --- [POS] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
