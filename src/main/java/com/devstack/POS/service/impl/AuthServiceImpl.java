@@ -38,6 +38,6 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public AuthResponseDTO login(LoginRequestDTO dto) {
-        return null;
+        authenticationManager.authenticate
     }
 }
