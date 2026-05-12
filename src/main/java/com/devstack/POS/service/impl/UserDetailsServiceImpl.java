@@ -20,15 +20,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return systemUserRepo.findSystemUserByEmail(username)
-                .map(user->new User(
-                        user.getEmail(),
-                        user.getPassword(),
-                        user.isActive(),
-                        true,
-                        true,
-                        true,
-                        List.of(()->new SimpleGrantedAuthority("ROLE_"+user.getRole().name()))
-                ))
-                .orElseThrow(()->new UsernameNotFoundException("User not found "+ username));
+                .orElseThrow(() ->
+                        new UsernameNotFoundException("User not found " + username));
     }
 }

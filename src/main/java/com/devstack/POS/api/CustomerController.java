@@ -91,7 +91,7 @@ public class CustomerController {
     }
 
     @GetMapping("/list")
-    @PreAuthorize("hasAnyRole('ADMIN','MANAGER')")
+    @PreAuthorize("hasAnyRole('ADMIN','MANAGER','USER')")
     public ResponseEntity<StandardResponseDTO> searchCustomers() {
         List<CustomerResponseDTO> result = customerService.findAll();
         return ResponseEntity
