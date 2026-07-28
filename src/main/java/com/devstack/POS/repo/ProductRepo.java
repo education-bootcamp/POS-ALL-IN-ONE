@@ -15,6 +15,6 @@ public interface ProductRepo extends JpaRepository<Product, UUID> {
     @Query(value = "SELECT * FROM product WHERE description LIKE ?1", nativeQuery = true)
     public Page<Product> findAllProducts(String searchText, Pageable pageable);
 
-    @Query(value = "SELECT COUNT(*) FROM product WHERE name LIKE ?1", nativeQuery = true)
+    @Query(value = "SELECT COUNT(*) FROM product WHERE description LIKE ?1", nativeQuery = true)
     public long countAllProducts(String searchText);
 }

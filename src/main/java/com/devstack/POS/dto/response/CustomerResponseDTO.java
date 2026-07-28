@@ -1,8 +1,12 @@
 package com.devstack.POS.dto.response;
 
-import lombok.*;
-
 import java.util.UUID;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,6 +16,6 @@ import java.util.UUID;
 public class CustomerResponseDTO {
     private UUID id;
     private String name;
-    private double salary;
     private String address;
+    private double salary;
 }

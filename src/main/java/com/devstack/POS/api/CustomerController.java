@@ -75,7 +75,7 @@ public class CustomerController {
     }
 
     @GetMapping
-    @PreAuthorize("hasAnyRole('ADMIN','MANAGER')")
+    @PreAuthorize("hasAnyRole('ADMIN','MANAGER','USER')")
     public ResponseEntity<StandardResponseDTO> searchCustomers(
             @RequestParam(defaultValue = "") String searchText,
             @RequestParam(defaultValue = "0") int page,
