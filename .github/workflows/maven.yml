@@ -21,6 +21,6 @@ jobs:
       - name: Start Jar File
         run: |
           nohup sudo java -jar \
-            /root/developersstack/actions-runner/_work/developers-stack-api/developers-stack-api/target/developers-stack-api-0.0.1-SNAPSHOT.jar \
+            /root/actions-runner/_work/POS-ALL-IN-ONE/POS-ALL-IN-ONE/target/POS-0.0.1-SNAPSHOT.jar \
             > /root/developersstack/app.log 2>&1 &
           echo "App started, PID: $!"
