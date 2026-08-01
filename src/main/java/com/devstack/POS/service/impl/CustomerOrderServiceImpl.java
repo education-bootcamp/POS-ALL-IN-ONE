@@ -34,32 +34,51 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
     private final ProductRepo productRepo;
     private final OrderDetailsRepo orderDetailsRepo;
 
+    /**
+     * Places a new order.
+     * <p>
+     * Runs inside a single DB transaction: the order header, every order line,
+     * and every product stock deduction are all committed together, or none of
+     * them are (e.g. if a product is out of stock, everything already written
+     * in this method call is rolled back).
+     * <p>
+     * Each product row is read with {@code findByIdForUpdate}, which takes a
+     * pessimistic write lock (SELECT ... FOR UPDATE). This is what actually
+     * protects qtyOnHand: without it, two customers placing an order for the
+     * last unit of the same product at the same time could both read
+     * "1 in stock", both pass the check, and both get their order confirmed
+     * -- overselling the product. With the lock, the second transaction waits
+     * for the first to commit (or roll back) before it can read the row, so it
+     * always sees the up-to-date stock.
+     */
     @Override
     @Transactional
     public void createOrder(CustomerOrderRequestDTO dto) {
-        Customer selectedCustomer = customerRepo.findById(dto.getCustomerId()).orElseThrow(() -> new EntryNotFoundException("Customer not found for provided id"));
+        Customer selectedCustomer = customerRepo.findById(dto.getCustomerId())
+                .orElseThrow(() -> new EntryNotFoundException("Customer not found for provided id"));
 
-        CustomerOrder savedData = orderRepo.save(orderMapper.toCustomerOrder(
+        CustomerOrder savedOrder = orderRepo.save(orderMapper.toCustomerOrder(
                 selectedCustomer, dto.getDetails(), dto.getDate()
         ));
 
-        for (OrderDetailsRequestDTO temp : dto.getDetails()) {
-            Product selectedProduct = productRepo.findById(temp.getProductId())
-                    .orElseThrow(() -> new EntryNotFoundException(String.format("Product Not found %s", temp.getProductId())));
+        for (OrderDetailsRequestDTO item : dto.getDetails()) {
+            Product lockedProduct = productRepo.findByIdForUpdate(item.getProductId())
+                    .orElseThrow(() -> new EntryNotFoundException(
+                            String.format("Product not found for id %s", item.getProductId())));
 
-            if (temp.getQty() <= selectedProduct.getQtyOnHand()) {
-                orderDetailsRepo.save(orderMapper.toOrderDetails(
-                        savedData, selectedProduct, temp.getUnitPrice(), temp.getQty()
-                ));
-
-                selectedProduct.setQtyOnHand(selectedProduct.getQtyOnHand() - temp.getQty());
-                productRepo.save(selectedProduct);
-
-            } else {
-                throw new ValidationException("Product qty is mismatch");
+            if (item.getQty() > lockedProduct.getQtyOnHand()) {
+                throw new ValidationException(
+                        String.format("Insufficient stock for '%s'. Available: %d, Requested: %d",
+                                lockedProduct.getDescription(), lockedProduct.getQtyOnHand(), item.getQty()));
             }
-        }
 
+            orderDetailsRepo.save(orderMapper.toOrderDetails(
+                    savedOrder, lockedProduct, item.getUnitPrice(), item.getQty()
+            ));
+
+            lockedProduct.setQtyOnHand(lockedProduct.getQtyOnHand() - item.getQty());
+            productRepo.save(lockedProduct);
+        }
     }
 
     @Override
@@ -71,20 +90,21 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
         Customer selectedCustomer = customerRepo.findById(dto.getCustomerId())
                 .orElseThrow(() -> new EntryNotFoundException("Customer not found for provided id"));
 
-        // restore stock that was reserved by the previous line items
+        // restore stock that was reserved by the previous line items (locked row-by-row)
         List<OrderDetails> oldDetails = existingOrder.getDetailsList();
         if (oldDetails != null) {
             for (OrderDetails oldDetail : oldDetails) {
-                Product product = oldDetail.getProduct();
-                product.setQtyOnHand(product.getQtyOnHand() + oldDetail.getQty());
-                productRepo.save(product);
+                Product lockedProduct = productRepo.findByIdForUpdate(oldDetail.getProduct().getId())
+                        .orElseThrow(() -> new EntryNotFoundException("Product not found for provided id"));
+                lockedProduct.setQtyOnHand(lockedProduct.getQtyOnHand() + oldDetail.getQty());
+                productRepo.save(lockedProduct);
             }
             orderDetailsRepo.deleteAll(oldDetails);
         }
 
         // validate stock availability for the new line items before committing any change
         for (OrderDetailsRequestDTO temp : dto.getDetails()) {
-            Product selectedProduct = productRepo.findById(temp.getProductId())
+            Product selectedProduct = productRepo.findByIdForUpdate(temp.getProductId())
                     .orElseThrow(() -> new EntryNotFoundException(String.format("Product Not found %s", temp.getProductId())));
 
             if (temp.getQty() > selectedProduct.getQtyOnHand()) {
@@ -98,7 +118,7 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
         orderRepo.save(existingOrder);
 
         for (OrderDetailsRequestDTO temp : dto.getDetails()) {
-            Product selectedProduct = productRepo.findById(temp.getProductId())
+            Product selectedProduct = productRepo.findByIdForUpdate(temp.getProductId())
                     .orElseThrow(() -> new EntryNotFoundException(String.format("Product Not found %s", temp.getProductId())));
 
             orderDetailsRepo.save(orderMapper.toOrderDetails(
@@ -119,9 +139,10 @@ public class CustomerOrderServiceImpl implements CustomerOrderService {
         List<OrderDetails> details = existingOrder.getDetailsList();
         if (details != null) {
             for (OrderDetails detail : details) {
-                Product product = detail.getProduct();
-                product.setQtyOnHand(product.getQtyOnHand() + detail.getQty());
-                productRepo.save(product);
+                Product lockedProduct = productRepo.findByIdForUpdate(detail.getProduct().getId())
+                        .orElseThrow(() -> new EntryNotFoundException("Product not found for provided id"));
+                lockedProduct.setQtyOnHand(lockedProduct.getQtyOnHand() + detail.getQty());
+                productRepo.save(lockedProduct);
             }
         }
 
